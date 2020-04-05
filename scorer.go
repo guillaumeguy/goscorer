@@ -1,4 +1,4 @@
-package scorer
+package main
 
 import (
 	"github.com/asafschers/goscore"

@@ -4,10 +4,9 @@ import (
 	"encoding/xml"
 	"fmt"
 	"github.com/asafschers/goscore"
-	"goscorer/scorer"
+	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"log"
-	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -25,14 +24,14 @@ func main() {
 
 func startPage(c *gin.Context, model *goscore.RandomForest) {
 
-	var input scorer.Input
+	var input Input
 	if c.BindJSON(&input) == nil {
 		log.Println(input.Sepal_length_cm)
 		log.Println(input.Sepal_width_cm)
 		log.Println(input.Petal_length_cm)
 		log.Println(input.Petal_width_cm)
 		log.Println("Binding success...............")
-		score := scorer.ScoreInput(&input, model)
+		score := ScoreInput(&input, model)
 		score_str := fmt.Sprintf("%f", score)
 		c.String(200, score_str)
 	} else {
