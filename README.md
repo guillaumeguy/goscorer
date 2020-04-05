@@ -1,9 +1,7 @@
 # goscorer
-A real time scorer in Go
-
+A HTTP scorer in GoLang using GIN and PMML files
 
 This package illustrates the use of Golang to provide scores using a random forest.
-
 
 The way it works:
 <li> Offline, the IRIS dataset was used to create a random forest in R and is then exported to PMML and stored under the  `/static` path. The PMML is provided.
