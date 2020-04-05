@@ -1,6 +1,85 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "AmQd5V0ddmDAmQgy3M2T8c5WsMI=",
+			"path": "github.com/asafschers/goscore",
+			"revision": "6e6e174c153acb81cfdeb3c4d23b48481468a10f",
+			"revisionTime": "2019-08-23T11:21:07Z"
+		},
+		{
+			"checksumSHA1": "qlEzrgKgIkh7y0ePm9BNo1cNdXo=",
+			"path": "github.com/gin-contrib/sse",
+			"revision": "43f0f29dbd2b3f0feeebff91fd9cda22db296938",
+			"revisionTime": "2019-09-05T05:13:34Z"
+		},
+		{
+			"checksumSHA1": "5c6K4kpeE9KB24k2YRUwZEAcfMY=",
+			"path": "github.com/gin-gonic/gin",
+			"revision": "3315353c20ab224d9308db9df19d83383dba539a",
+			"revisionTime": "2020-03-27T13:39:11Z"
+		},
+		{
+			"checksumSHA1": "VGrSfi6ORVO4G4bdQYtp2cZVEdI=",
+			"path": "github.com/gin-gonic/gin/binding",
+			"revision": "3315353c20ab224d9308db9df19d83383dba539a",
+			"revisionTime": "2020-03-27T13:39:11Z"
+		},
+		{
+			"checksumSHA1": "/81vKkFpIIiNB/QszbfwiWfX1tk=",
+			"path": "github.com/gin-gonic/gin/internal/bytesconv",
+			"revision": "3315353c20ab224d9308db9df19d83383dba539a",
+			"revisionTime": "2020-03-27T13:39:11Z"
+		},
+		{
+			"checksumSHA1": "rST0S8cuVbM57VmJhWXhKNUkKTc=",
+			"path": "github.com/gin-gonic/gin/internal/json",
+			"revision": "3315353c20ab224d9308db9df19d83383dba539a",
+			"revisionTime": "2020-03-27T13:39:11Z"
+		},
+		{
+			"checksumSHA1": "ZHiNx6a8A8f4x7EeT8N3EEx9e5Q=",
+			"path": "github.com/gin-gonic/gin/render",
+			"revision": "3315353c20ab224d9308db9df19d83383dba539a",
+			"revisionTime": "2020-03-27T13:39:11Z"
+		},
+		{
+			"checksumSHA1": "Q3FteGbNvRRUMJqbYbmrcBd2DMo=",
+			"path": "github.com/golang/protobuf/proto",
+			"revision": "84668698ea25b64748563aa20726db66a6b8d299",
+			"revisionTime": "2020-03-12T22:07:03Z"
+		},
+		{
+			"checksumSHA1": "CQ794EIFp/4zTVi4redzOXOPY8k=",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "cb30d6282491c185f77d9bec5d25de1bb61a06bc",
+			"revisionTime": "2020-01-28T10:39:42Z"
+		},
+		{
+			"checksumSHA1": "AQVpiYgVjnxzliGIQj/4+QWY5Qk=",
+			"path": "github.com/mattn/go-shellwords",
+			"revision": "28e4fdf351f0744b1249317edb45e4c2aa7a5e43",
+			"revisionTime": "2020-02-05T01:46:34Z"
+		},
+		{
+			"checksumSHA1": "8mJ7vjP4pj4Y8FH5jVT22mW5acA=",
+			"path": "github.com/ugorji/go/codec",
+			"revision": "42bc974514ff101a54c6b72a0e4dee29d96c0b26",
+			"revisionTime": "2019-08-12T10:43:08Z"
+		},
+		{
+			"checksumSHA1": "QJYs+A9A9Kg+YGdYLBwK/eu0nvs=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "c3d80250170dec19bf61949c81233cede5ddaf61",
+			"revisionTime": "2020-03-31T11:15:04Z"
+		},
+		{
+			"checksumSHA1": "dIH8v3OdMGX07t3yJGMODGFUKPg=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "53403b58ad1b561927d19068c655246f2db79d48",
+			"revisionTime": "2020-01-21T17:19:40Z"
+		}
+	],
 	"rootPath": "goscorer"
 }

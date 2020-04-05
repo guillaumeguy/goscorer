@@ -1,18 +1,43 @@
 package main
 
 import (
-	"io"
-	"net/http"
-	"os"
+	"encoding/xml"
+	"fmt"
+	"github.com/asafschers/goscore"
+	"goscorer/scorer"
+	"io/ioutil"
+	"log"
+	"github.com/gin-gonic/gin"
 )
 
-func hello(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "hello there")
+func main() {
+	log.Println("Hello World")
+	route := gin.Default()
+
+	// Load model
+	modelXml, _ := ioutil.ReadFile("static/iris.pmml")
+	var model goscore.RandomForest // or goscore.GradientBoostedModel
+	xml.Unmarshal([]byte(modelXml), &model)
+
+	route.GET("/testing", func(c *gin.Context) { startPage(c, &model) })
+	route.Run(":8085")
 }
 
-func main() {
-	var port = os.Getenv("PORT")
-	println(port)
-	http.HandleFunc("/", hello)
-	http.ListenAndServe(":" + port, nil)
+func startPage(c *gin.Context, model *goscore.RandomForest) {
+
+	var input scorer.Input
+	if c.BindJSON(&input) == nil {
+		log.Println(input.Sepal_length_cm)
+		log.Println(input.Sepal_width_cm)
+		log.Println(input.Petal_length_cm)
+		log.Println(input.Petal_width_cm)
+		log.Println("Binding success...............")
+		score := scorer.ScoreInput(&input, model)
+		score_str := fmt.Sprintf("%f", score)
+		c.String(200, score_str)
+	} else {
+		log.Println("Binding failed...............")
+		c.String(200, "Failure")
+	}
+
 }
