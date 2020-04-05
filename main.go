@@ -1,4 +1,4 @@
-package goscorer
+package main
 
 import (
 	"io"
@@ -12,6 +12,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	var port = os.Getenv("PORT")
+	println(port)
 	http.HandleFunc("/", hello)
-	http.ListenAndServe(":"+port, nil)
+	http.ListenAndServe(":" + port, nil)
 }
