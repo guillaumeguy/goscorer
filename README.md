@@ -6,7 +6,7 @@ This package illustrates the use of Golang to provide scores using a random fore
 The way it works:
 <li> Offline, the IRIS dataset was used to create a random forest in R and is then exported to PMML and stored under the  `/static` path. The PMML is provided.
 <li> The Golang HTTP server preloads the model when the service starts (command: `go run main.go`) 
-<li>  <a href="https://github.com/gin-gonic/gin">  go-Gin </a> receives a POST request, parses it, and returns a score (probability to is a Setosa)
+<li>  <a href="https://github.com/gin-gonic/gin">  go-Gin </a> receives the GET request, parses it, and returns a score (probability to is a Setosa)
 
 ## Try it out:
 
