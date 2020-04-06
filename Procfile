@@ -1,1 +1,1 @@
-web: goscorer
+web: bin/goscorer
