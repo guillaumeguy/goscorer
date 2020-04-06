@@ -14,22 +14,7 @@ type ScoringInput struct {
 
 func ScoreInput(input *ScoringInput, model *goscore.RandomForest) float64 {
 
-	features := map[string]interface{}{
-		"sepal_length_cm": input.Sepal_length_cm,
-		"sepal_width_cm":  input.Sepal_width_cm,
-		"petal_length_cm": input.Petal_length_cm,
-		"petal_width_cm":  input.Petal_width_cm,
-	}
+	var score = 0.0 
 
-	log.Println(features)
-
-	score, err := model.Score(features, "1")
-
-	println("score", score)
-
-	if err != nil {
-		log.Fatal(err)
-	}
 	return score
-
 }

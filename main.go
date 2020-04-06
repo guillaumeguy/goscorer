@@ -51,16 +51,13 @@ func startPage(c *gin.Context, model *goscore.RandomForest) {
 
 	var input scorer.ScoringInput
 	if c.BindJSON(&input) == nil {
-		log.Println(input.Sepal_length_cm)
-		log.Println(input.Sepal_width_cm)
-		log.Println(input.Petal_length_cm)
-		log.Println(input.Petal_width_cm)
-		log.Println("Binding success...............")
+
 		score := scorer.ScoreInput(&input, model)
 		score_str := fmt.Sprintf("%f", score)
+		
 		c.String(200, score_str)
 	} else {
-		log.Println("Binding failed...............")
+
 		c.String(200, "Failure")
 	}
 
