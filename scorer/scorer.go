@@ -5,14 +5,14 @@ import (
 	"log"
 )
 
-type Input struct {
+type ScoringInput struct {
 	Sepal_length_cm float64 `json:"sepal_length_cm"`
 	Sepal_width_cm  float64 `json:"sepal_width_cm"`
 	Petal_length_cm float64 `json:"petal_length_cm"`
 	Petal_width_cm  float64 `json:"Petal_width_cm"`
 }
 
-func ScoreInput(input *Input, model *goscore.RandomForest) float64 {
+func ScoreInput(input *ScoringInput, model *goscore.RandomForest) float64 {
 
 	features := map[string]interface{}{
 		"sepal_length_cm": input.Sepal_length_cm,
